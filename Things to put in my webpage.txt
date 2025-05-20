@@ -1,0 +1,20 @@
+
+
+
+Show originallity
+Title
+visibility of the submit button
+About us
+'This platform was developed by a dedicated young student, Blessed Harvey Muhereza, currently enrolled at Ndejje Senior Secondary School. The project aims to support educational advancement by providing accessible learning resources, particularly for students following Uganda’s new curriculum. It is designed to enhance learning efficiency and better prepare students for future examinations and assessments.
+
+For more information, you are welcome to visit him at his school. A photo of Blessed Harvey Muhereza is provided below.'
+
+And also change the picture of the developer
+
+Pages to remove
+Jobs
+Donate
+
+Pages to improve
+News
+Chat

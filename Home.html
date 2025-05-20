@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" type="image/png" href="ww.jpg">
+  <link rel="stylesheet" href="Styling landing.css">
+  <title>Hyper Learn - Welcome 😊</title>
+</head>
+
+<body class="page">
+
+  <header class="header">
+    <div class="logo-container">
+      <img src="logo.png" alt="Hyper Learn Logo" class="logo">
+      <h1 class="site-title">Hyper Learn</h1>
+    </div>
+    <a href="Terms and Conditions.html" class="button">Terms & Conditions😉</a>
+  </header>
+
+  <main class="main">
+    <h2 class="main-heading">Welcome to Hyper Learn</h2>
+    <p class="main-subtext">Learning made easy.</p>
+    <a href="INDEX.html" class="button join-button">Join Now😆</a>
+  </main>
+
+  <section class="gallery">
+    <h3 class="gallery-title">Our Hyper Space</h3>
+    <div class="gallery-grid">
+
+      <div class="image-card">
+        <img src="robot.jpg" alt="Learning Moment 1">
+        <div class="image-overlay">
+          <p>Modern Learning Today</p>
+        </div>
+      </div>
+
+      <div class="image-card">
+        <img src="logo.png" alt="Learning Moment 2">
+        <div class="image-overlay">
+          <p>Our Logo</p>
+        </div>
+      </div>
+
+      <div class="image-card">
+        <img src="e.jpg" alt="Learning Moment 3">
+        <div class="image-overlay">
+          <p>New Curriculum Based Platform</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    © 2025 Hyper Learn. Reserved for the New Curricullum. All rights reserved.
+  </footer>
+
+  <script>
+    const slider = document.getElementById('slider');
+    let index = 0;
+
+    function showSlide(i) {
+      const total = slider.children.length;
+      index = (i + total) % total;
+      slider.style.transform = 'translateX(' + (-index * 100) + '%)';
+    }
+
+    function nextSlide() {
+      showSlide(index + 1);
+    }
+
+    function prevSlide() {
+      showSlide(index - 1);
+    }
+
+    setInterval(nextSlide, 4000);
+  </script>
+
+</body>
+</html>

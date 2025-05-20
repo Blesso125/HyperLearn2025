@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Hyper News📰</title>
+    <link rel="stylesheet" href="styling.css">
+    <link rel="icon" type="image/png" href="ww.jpg">
+</head>
+<body>
+	<div class="main">
+	<div class="content">
+			<h2 class="logo">Hyper News📰</h2><br>
+            <div class="content"><br>
+                <br>
+                <br>
+                <br>
+                <h3><p class="par">Get the latest news about how education is in this country and other countries.</p></h3>
+                <div id="edu-news-feed" style="font-family: sans-serif; background: #f4f4f4; padding: 1rem; border-radius: 10px;">
+                    <h2>📘 Latest in Education</h2>
+                    <ul id="edu-news-list" style="list-style: none; padding: 0;"></ul>
+                  </div>
+                  
+                  <script>
+                  fetch('https://api.rss2json.com/v1/api.json?rss_url=https://www.edutopia.org/rss.xml')
+                    .then(response => response.json())
+                    .then(data => {
+                      const list = document.getElementById('edu-news-list');
+                      data.items.slice(0, 5).forEach(item => {
+                        const li = document.createElement('li');
+                        li.style.marginBottom = '1.5rem';
+                        li.innerHTML = `
+                          <h3 style="margin-bottom: 0.2rem;"><a href="${item.link}" target="_blank" style="color: #1a73e8; text-decoration: none;">${item.title}</a></h3>
+                          <p style="margin: 0.3rem 0; color: #444;">${item.description.slice(0, 100)}...</p>
+                          <span style="font-size: 0.9rem; color: #888;">${new Date(item.pubDate).toDateString()}</span>
+                        `;
+                        list.appendChild(li);
+                      });
+                    })
+                    .catch(error => {
+                      document.getElementById('edu-news-list').innerHTML = '<li>Unable to load news at the moment.</li>';
+                      console.error('Error fetching news:', error);
+                    });
+                  </script>
+                  
+                <iframe width="500" height="315" src="https://www.youtube.com/embed/p3MCS4VpLN4?si=5bo8sJ4Op3qFv3-Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="500" height="315" src="https://www.youtube.com/embed/3k1NG8Y2PbY?si=oxVrRGCL7Pnjy5xu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/XlnspY2wOVw?si=XUxDU8X5fQ6isxvk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/6TG8nGvLIew?si=XtQ1zD3mqDbHlY_o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/diFpzMNINJI?si=VXUuLKyXdTHek1W7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/MheWL_8Lkl8?si=SeIx3Cn3002OirVe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <br>
+                <br>
+                <br>
+                <button class="cn">
+                <a href="Main menu.html">Previous🔙</a></button>
